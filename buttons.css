@@ -1,0 +1,83 @@
+/* ==========================================================================
+   buttons.css — small reusable "button-like" components used on both
+   the Home and Menu screens: the red + add button, filter pills, and
+   the round category icon buttons
+   ========================================================================== */
+
+/* Red circular "+" add-to-cart button */
+.add-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-red);
+  color: var(--white);
+  border: none;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Category filter pills (Menu page) */
+.pill {
+  flex: 0 0 auto;
+  background: var(--pink-light);
+  color: var(--accent-red);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pill.active {
+  background: var(--accent-red);
+  color: var(--white);
+}
+
+/* Round category icon buttons (Home page quick filters) */
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  flex: 1;
+}
+
+.category-item .icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--pink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.category-item.active .icon-circle {
+  background: var(--accent-red);
+  color: var(--white);
+}
+
+.category-item span.label {
+  font-size: 11.5px;
+  color: var(--text-dark);
+}
+
+/* Generic red pill CTA button, reused on empty/confirmation states and
+   in the desktop hero section */
+.hero-cta {
+  display: inline-block;
+  background: var(--accent-red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 12px 26px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: 14px;
+}

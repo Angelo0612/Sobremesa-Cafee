@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Orders — Sobremesa Café</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="search.css">
+<link rel="stylesheet" href="buttons.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="stub.css">
+<link rel="stylesheet" href="cart.css">
+<link rel="stylesheet" href="item.css">
+<link rel="stylesheet" href="orders.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body data-page="orders">
+<div class="app">
+
+  <header class="app-header">
+    <div class="header-left">
+      <a class="icon-btn" href="index.html" aria-label="Back"><i class="fa-solid fa-arrow-left"></i></a>
+      <span class="header-title">My Orders</span>
+    </div>
+    <nav class="desktop-nav">
+      <a class="nav-item" data-page="home" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+      <a class="nav-item" data-page="menu" href="menu.html"><i class="fa-solid fa-utensils"></i>Menu</a>
+      <a class="nav-item" data-page="cart" href="cart.html"><i class="fa-solid fa-bag-shopping"></i>Cart
+        <span class="badge" data-cart-badge style="display:none;">0</span>
+      </a>
+      <a class="nav-item" data-page="orders" href="orders.html"><i class="fa-solid fa-clipboard-list"></i>Orders</a>
+    </nav>
+    <button class="icon-btn hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </header>
+
+  <main class="app-main">
+    <div class="order-mode-toggle order-tabs">
+      <button type="button" class="mode-btn active" data-tab="active">Active</button>
+      <button type="button" class="mode-btn" data-tab="history">History</button>
+    </div>
+
+    <div id="orders-list"></div>
+
+    <div id="orders-empty" class="stub" hidden>
+      <div class="stub-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+      <h2>No orders yet</h2>
+      <p>Orders you place will show up here.</p>
+      <a class="hero-cta" href="menu.html">Browse Menu</a>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a class="nav-item" data-page="home" href="index.html">
+      <span class="nav-icon"><i class="fa-solid fa-house"></i></span>Home
+    </a>
+    <a class="nav-item" data-page="menu" href="menu.html">
+      <span class="nav-icon"><i class="fa-solid fa-utensils"></i></span>Menu
+    </a>
+    <a class="nav-item" data-page="cart" href="cart.html">
+      <span class="nav-icon"><i class="fa-solid fa-bag-shopping"></i></span>Cart
+      <span class="badge" data-cart-badge style="display:none;">0</span>
+    </a>
+    <a class="nav-item" data-page="orders" href="orders.html">
+      <span class="nav-icon"><i class="fa-solid fa-clipboard-list"></i></span>Orders
+    </a>
+  </nav>
+
+</div>
+
+<script src="menu-data.js"></script>
+<script src="app.js"></script>
+<script src="orders.js"></script>
+</body>
+</html>

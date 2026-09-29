@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item — Sobremesa Café</title>
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="search.css">
+<link rel="stylesheet" href="buttons.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="menu.css">
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="stub.css">
+<link rel="stylesheet" href="cart.css">
+<link rel="stylesheet" href="item.css">
+<link rel="stylesheet" href="orders.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body data-page="menu">
+<div class="app item-page">
+
+  <div class="item-hero" id="item-hero">
+    <a class="close-btn" href="menu.html" aria-label="Close">✕</a>
+  </div>
+
+  <main class="app-main item-main">
+
+    <div class="item-title-row">
+      <h1 id="item-name">Item</h1>
+      <p class="item-price" id="item-price">₱0</p>
+    </div>
+    <p class="item-desc" id="item-desc"></p>
+
+    <div id="customize-section" hidden>
+      <hr>
+      <h2 class="customize-heading">Customize Your Drink</h2>
+
+      <section class="option-group">
+        <h3>Size</h3>
+        <div class="option-row" id="size-options"></div>
+      </section>
+
+      <section class="option-group">
+        <h3>Ice Level</h3>
+        <div class="option-row option-row--icons" id="ice-options"></div>
+      </section>
+
+      <section class="option-group">
+        <h3>Sugar Level</h3>
+        <div class="option-row" id="sugar-options"></div>
+      </section>
+
+      <section class="option-group">
+        <h3>Add-ons</h3>
+        <div id="addon-options"></div>
+      </section>
+    </div>
+
+    <div class="qty-row">
+      <span>Quantity</span>
+      <div class="qty-stepper">
+        <button id="qty-minus" aria-label="Decrease quantity">−</button>
+        <span id="qty-value">1</span>
+        <button id="qty-plus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+
+  </main>
+
+  <button class="add-to-cart-btn" id="add-to-cart-btn">
+    Add to Cart · <span id="total-price">₱0</span>
+  </button>
+
+</div>
+
+<script src="menu-data.js"></script>
+<script src="app.js"></script>
+<script src="item.js"></script>
+</body>
+</html>

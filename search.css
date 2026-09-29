@@ -1,0 +1,26 @@
+/* ==========================================================================
+   search.css — the pill-shaped "Search menu items" bar
+   ========================================================================== */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: 11px 16px;
+  margin: 14px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  color: var(--text-dark);
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   base.css — fonts, design tokens, reset, and the phone-frame app shell
+   Loaded first: every other CSS file relies on these variables.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+:root {
+  --maroon: #8a1a1a;
+  --maroon-dark: #6e1414;
+  --cream: #f6f1ea;
+  --cream-strong: #efe4d8;
+  --pink-light: #f9e4df;
+  --accent-red: #a51f1f;
+  --accent-red-soft: #d86d4a;
+  --text-dark: #201d1c;
+  --text-muted: #706865;
+  --white: #ffffff;
+  --border-light: #e7ddd2;
+  --shadow-soft: 0 18px 30px rgba(70, 42, 26, 0.08);
+  --radius-card: 18px;
+  --radius-pill: 999px;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: linear-gradient(135deg, #e7e0d8 0%, #d9d1c7 100%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+
+/* Phone-sized app frame that every page lives inside */
+.app {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,0.18);
+}
+
+.app-main {
+  flex: 1;
+  padding: 18px 20px 90px;
+  overflow-y: auto;
+}

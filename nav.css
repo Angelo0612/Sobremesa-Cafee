@@ -1,0 +1,81 @@
+/* ==========================================================================
+   nav.css — sticky bottom tab bar (Home / Menu / Cart / Orders)
+   ========================================================================== */
+
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 14px;
+  box-shadow: 0 -8px 24px rgba(50, 30, 20, 0.04);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10.5px;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-item .nav-icon { font-size: 18px; }
+
+.nav-item.active {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.nav-item .badge {
+  position: absolute;
+  top: -4px;
+  right: 6px;
+  background: var(--accent-red);
+  color: var(--white);
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top nav bar shown only on wide (desktop) screens — see responsive.css
+   for the display:none/flex toggle at the breakpoint. Reuses .nav-item
+   so active-state highlighting in app.js applies to both nav bars. */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 28px;
+}
+
+.desktop-nav .nav-item {
+  flex-direction: row;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.82);
+  letter-spacing: 0.02em;
+}
+
+.desktop-nav .nav-item.active {
+  color: var(--white);
+}
+
+.desktop-nav .nav-item .badge {
+  position: static;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-pill);
+  padding: 1px 6px;
+}

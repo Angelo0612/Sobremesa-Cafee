@@ -1,0 +1,89 @@
+/* ==========================================================================
+   header.css — top bar used on every page (brand on Home, title + back
+   arrow on inner pages)
+   ========================================================================== */
+
+.app-header {
+  background: linear-gradient(180deg, rgba(126, 22, 22, 0.98) 0%, rgba(96, 18, 18, 0.96) 100%);
+  color: var(--white);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 10px 24px rgba(49, 18, 13, 0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff4ea;
+  font-size: 12px;
+}
+
+.app-header .brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  text-align: center;
+  color: #fff7f0;
+}
+
+.app-header .brand .tagline {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.icon-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  color: var(--white);
+  width: 34px;
+  height: 34px;
+  font-size: 15px;
+  padding: 0;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn.text-btn {
+  font-size: 12.5px;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
