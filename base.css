@@ -152,7 +152,6 @@ button { font-family: inherit; cursor: pointer; }
   justify-content: center;
   gap: 10px;
   padding: 8px 2px;
-  border-bottom: 1px solid rgba(201, 38, 38, 0.45);
   color: #a91e1e;
   font-size: 0.86rem;
   font-weight: 700;
@@ -167,7 +166,6 @@ button { font-family: inherit; cursor: pointer; }
 
 .landing-continue:hover .landing-action {
   color: #7f1717;
-  border-color: #7f1717;
 }
 
 .landing-continue:hover .landing-action i {
