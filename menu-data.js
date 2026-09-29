@@ -13,7 +13,7 @@ const MENU_ITEMS = [
     description: "Rich espresso with steamed milk. Smooth and balanced.",
     priceMin: 148,
     priceMax: 168,
-    thumbGradient: "linear-gradient(135deg,#caa26a,#8a5a2b)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=85')",
     featured: true
   },
   {
@@ -23,7 +23,7 @@ const MENU_ITEMS = [
     description: "Classic espresso, fresh milk, and sweet vanilla syrup.",
     priceMin: 148,
     priceMax: 168,
-    thumbGradient: "linear-gradient(135deg,#b5824a,#6b3f1d)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=900&q=85')",
     featured: true
   },
   {
@@ -33,7 +33,7 @@ const MENU_ITEMS = [
     description: "Bold espresso, rich chocolate, and velvety milk.",
     priceMin: 158,
     priceMax: 178,
-    thumbGradient: "linear-gradient(135deg,#8a4a2b,#3d2213)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=85')",
     featured: true
   },
   {
@@ -43,7 +43,7 @@ const MENU_ITEMS = [
     description: "Espresso and fresh milk sweetened with condensed milk.",
     priceMin: 158,
     priceMax: 178,
-    thumbGradient: "linear-gradient(135deg,#d9b98a,#8a5a2b)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -53,7 +53,7 @@ const MENU_ITEMS = [
     description: "Espresso and milk infused with spiced Biscoff cookie spread.",
     priceMin: 158,
     priceMax: 178,
-    thumbGradient: "linear-gradient(135deg,#d4a24a,#7a4a1e)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -63,7 +63,7 @@ const MENU_ITEMS = [
     description: "Stone-ground matcha whisked with fresh, creamy milk.",
     priceMin: 148,
     priceMax: 168,
-    thumbGradient: "linear-gradient(135deg,#a9c78a,#4c6b32)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -73,7 +73,7 @@ const MENU_ITEMS = [
     description: "Fresh milk blended with sweet strawberry puree.",
     priceMin: 138,
     priceMax: 158,
-    thumbGradient: "linear-gradient(135deg,#f2a6ad,#c94f5c)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -83,7 +83,7 @@ const MENU_ITEMS = [
     description: "Sizzling pork sisig served over garlic rice.",
     priceMin: 158,
     priceMax: 158,
-    thumbGradient: "linear-gradient(135deg,#c98a4a,#7a4520)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -93,7 +93,7 @@ const MENU_ITEMS = [
     description: "Triple-decker with egg, ham, and cheese.",
     priceMin: 168,
     priceMax: 168,
-    thumbGradient: "linear-gradient(135deg,#e0c48a,#a47a3a)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -103,7 +103,7 @@ const MENU_ITEMS = [
     description: "Creamy, caramelized-top cheesecake slice.",
     priceMin: 128,
     priceMax: 128,
-    thumbGradient: "linear-gradient(135deg,#e8c98a,#a1722f)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=85')",
     featured: false
   },
   {
@@ -113,7 +113,7 @@ const MENU_ITEMS = [
     description: "Buttery, flaky croissant filled with dark chocolate.",
     priceMin: 98,
     priceMax: 98,
-    thumbGradient: "linear-gradient(135deg,#8a5a2b,#3d2213)",
+    thumbGradient: "url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=85')",
     featured: false
   }
 ];

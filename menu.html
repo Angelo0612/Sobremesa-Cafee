@@ -36,7 +36,9 @@
       </a>
       <a class="nav-item" data-page="orders" href="orders.html"><i class="fa-solid fa-clipboard-list"></i>Orders</a>
     </nav>
-    <button class="icon-btn hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a class="icon-btn exit-link" href="index.html" aria-label="Exit to welcome screen" title="Exit to welcome screen">
+      <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+    </a>
   </header>
 
   <main class="app-main">
@@ -47,6 +49,14 @@
     </form>
 
     <nav class="pill-row" id="pill-row" aria-label="Filter by category"></nav>
+
+    <section class="menu-coffee-series" id="menu-coffee-series" aria-labelledby="menu-coffee-title">
+      <div class="section-heading">
+        <h2 id="menu-coffee-title">Coffee Series</h2>
+        <a class="view-all" href="menu.html?category=coffee">Explore Coffee <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="series-grid" id="menu-featured-grid"></div>
+    </section>
 
     <div class="menu-list" id="menu-list"></div>
     <p class="empty-state" id="empty-state" hidden>No items match your search.</p>
@@ -74,5 +84,6 @@
 <script src="menu-data.js"></script>
 <script src="app.js"></script>
 <script src="menu.js"></script>
+<script src="home.js"></script>
 </body>
 </html>

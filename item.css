@@ -15,7 +15,7 @@
 .close-btn {
   position: absolute;
   top: 14px;
-  right: 14px;
+  left: 14px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -25,6 +25,12 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
+}
+
+.item-exit {
+  position: absolute;
+  top: 14px;
+  right: 14px;
 }
 
 .item-main.app-main { padding-bottom: 24px; }

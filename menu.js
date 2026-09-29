@@ -34,6 +34,11 @@ function renderPills() {
 function renderList() {
   const list = document.getElementById("menu-list");
   const emptyState = document.getElementById("empty-state");
+  const coffeeSeries = document.getElementById("menu-coffee-series");
+
+  if (coffeeSeries) {
+    coffeeSeries.hidden = activeCategory !== "all" || searchTerm.trim().length > 0;
+  }
 
   const filtered = MENU_ITEMS.filter((item) => {
     const matchesCategory = activeCategory === "all" || item.category === activeCategory;

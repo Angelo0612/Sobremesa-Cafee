@@ -5,14 +5,15 @@
  */
 
 function renderFeaturedGrid() {
-  const grid = document.getElementById("featured-grid");
-  if (!grid) return;
+  const grids = document.querySelectorAll("#featured-grid, #menu-featured-grid");
+  if (!grids.length) return;
 
   const featured = MENU_ITEMS.filter((item) => item.featured);
 
-  grid.innerHTML = featured
-    .map(
-      (item) => `
+  grids.forEach((grid) => {
+    grid.innerHTML = featured
+      .map(
+        (item) => `
       <a class="series-card" href="item.html?id=${item.id}">
         <div class="thumb" style="background-image:${item.thumbGradient}"></div>
         <div class="info">
@@ -21,16 +22,16 @@ function renderFeaturedGrid() {
           <button class="add-btn" aria-label="Quick add ${item.name} to cart" data-add="${item.id}">+</button>
         </div>
       </a>`
-    )
-    .join("");
+      )
+      .join("");
 
-  // Same pattern as the menu list: the card links to the detail page,
-  // the + button quick-adds one unit without navigating away.
-  grid.querySelectorAll("[data-add]").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      quickAddToCart(btn.dataset.add);
+    // The card links to details; its + button quick-adds without navigating.
+    grid.querySelectorAll("[data-add]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        quickAddToCart(btn.dataset.add);
+      });
     });
   });
 }

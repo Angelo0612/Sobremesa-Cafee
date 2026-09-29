@@ -12,6 +12,14 @@
   padding-top: 56px;
 }
 
+.confirm-exit {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  background: var(--accent-red);
+}
+
 .confirm-check {
   width: 64px;
   height: 64px;

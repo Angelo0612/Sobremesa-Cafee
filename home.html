@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sobremesa Café</title>
+<script>
+  try {
+    if (sessionStorage.getItem("sobremesa-home-entry") === "yes") {
+      sessionStorage.removeItem("sobremesa-home-entry");
+      document.documentElement.classList.add("home-entering");
+    }
+  } catch {}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -36,7 +44,9 @@
       </a>
       <a class="nav-item" data-page="orders" href="orders.html"><i class="fa-solid fa-clipboard-list"></i>Orders</a>
     </nav>
-    <button class="icon-btn hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a class="icon-btn exit-link" href="index.html" aria-label="Exit to welcome screen" title="Exit to welcome screen">
+      <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+    </a>
   </header>
 
   <main class="app-main">
@@ -62,9 +72,18 @@
       <div class="hero-media">
         <div class="carousel">
           <div class="carousel-track" id="carousel-track">
-            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=60" alt="Coffee on a café table" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=60" alt="Cozy café interior" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1692742249337-3bf05e2b1ed7?w=900&q=60" alt="Fresh pastries" loading="lazy">
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=85" alt="Freshly prepared coffee in a ceramic cup" fetchpriority="high">
+              <p class="carousel-caption"><span>Slow mornings, made better</span><strong>Your coffee moment</strong></p>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1400&q=85" alt="Warm, welcoming café interior" loading="lazy">
+              <p class="carousel-caption"><span>A little space to pause</span><strong>Stay for a while</strong></p>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1400&q=85" alt="Golden, freshly baked croissants" loading="lazy">
+              <p class="carousel-caption"><span>Fresh from the oven</span><strong>A softer kind of treat</strong></p>
+            </div>
           </div>
         </div>
         <div class="carousel-dots" id="carousel-dots">
@@ -92,7 +111,7 @@
         <span class="icon-circle"><i class="fa-solid fa-utensils"></i></span><span class="label">Food</span>
       </a>
       <a class="category-item" href="menu.html?category=pastries">
-        <span class="icon-circle"><i class="fa-solid fa-croissant"></i></span><span class="label">Pastries</span>
+        <span class="icon-circle"><i class="fa-solid fa-cookie-bite"></i></span><span class="label">Pastries</span>
       </a>
     </nav>
 

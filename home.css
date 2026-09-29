@@ -126,11 +126,58 @@
   transition: transform 0.4s ease;
 }
 
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide::after {
+  content: "";
+  position: absolute;
+  inset: 30% 0 0;
+  background: linear-gradient(0deg, rgba(28, 19, 16, 0.7), transparent);
+  pointer-events: none;
+}
+
 .carousel-track img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
+  transition: transform 5s ease;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.035);
+}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.carousel-caption strong {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .carousel-dots {

@@ -17,8 +17,23 @@
     </div>
     <a class="landing-continue" href="home.html" aria-label="Click to continue to Sobremesa Café">
       <span class="landing-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="landing-hint">Click to continue</span>
+      <span class="landing-action">Click to continue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
     </a>
   </main>
+  <script>
+    const continueLink = document.querySelector(".landing-continue");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (continueLink && !reduceMotion) {
+      continueLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        try {
+          sessionStorage.setItem("sobremesa-home-entry", "yes");
+        } catch {}
+        document.body.classList.add("landing-leaving");
+        window.setTimeout(() => window.location.assign(continueLink.href), 340);
+      });
+    }
+  </script>
 </body>
 </html>

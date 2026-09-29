@@ -223,3 +223,50 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCartBadge();
   highlightActiveNav();
 });
+
+function createExitDialog() {
+  const dialog = document.createElement("dialog");
+  dialog.className = "exit-dialog";
+  dialog.setAttribute("aria-labelledby", "exit-dialog-title");
+  dialog.setAttribute("aria-describedby", "exit-dialog-description");
+  dialog.innerHTML = `
+    <div class="exit-dialog-content">
+      <span class="exit-dialog-mark" aria-hidden="true">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </span>
+      <p class="exit-dialog-eyebrow">LEAVE SOBREMESA CAFÉ</p>
+      <h2 id="exit-dialog-title">Return to the welcome screen?</h2>
+      <p class="exit-dialog-description" id="exit-dialog-description">
+        Your cart and order information will remain saved on this device.
+      </p>
+      <div class="exit-dialog-actions">
+        <button class="exit-dialog-button exit-dialog-stay" type="button" data-exit-cancel>Stay here</button>
+        <button class="exit-dialog-button exit-dialog-confirm" type="button" data-exit-confirm>
+          Exit to welcome <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  `;
+
+  dialog.querySelector("[data-exit-cancel]").addEventListener("click", () => dialog.close());
+  dialog.querySelector("[data-exit-confirm]").addEventListener("click", () => {
+    dialog.close();
+    window.location.assign("index.html");
+  });
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  document.body.append(dialog);
+  return dialog;
+}
+
+let exitDialog;
+
+document.addEventListener("click", (event) => {
+  const exitLink = event.target.closest(".exit-link");
+  if (!exitLink) return;
+
+  event.preventDefault();
+  exitDialog ||= createExitDialog();
+  if (!exitDialog.open) exitDialog.showModal();
+});
